@@ -6,6 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-   <div id="root"></div> 
+   <div id="root"></div>
+   <!--CDN Links-->
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+   <script>
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    
+    const h1= React.createElement("h1",null, "Learning React");
+    const p = React.createElement("p",null,"BCA Learning React");
+
+
+    //Define function handleClick
+    function handleClick(){
+        alert("React has been activated!!! Boom!!!");
+    }
+    const button = React.createElement(
+        "button",
+        { onClick: handleClick },
+        "Activate Me"
+    );
+    const div = React.createElement("div",null,h1,p,button);
+    
+    root.render(div);
+   </script>
 </body>
 </html>
